@@ -2,8 +2,10 @@ package com.victorproject.project.entities.pk;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Set;
 
 import com.victorproject.project.entities.Order;
+import com.victorproject.project.entities.OrderItem;
 import com.victorproject.project.entities.Product;
 
 import jakarta.persistence.Embeddable;
@@ -34,7 +36,8 @@ public class OrderItemPk implements Serializable{
 	}
 	public void setProduct(Product product) {
 		this.product = product;
-	}
+	}	
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(order, product);
